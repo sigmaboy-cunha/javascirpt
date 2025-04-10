@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar pares</title>
+</head>
+<body>
+    <label for="numero">Digite números separados por virgulas:</label>
+    <input type="text" id="numeros">
+    <button onclick="filtrarPares()">Filtrar</button>
+    <p id="resultado"></p>
+    <script>
+        const filtrarPares = () => {
+            let numeros =
+            document.getElementById("numeros").value.split(",").map(Number);
+            let resultado =
+            document.getElementById("Resultado");
+            let pares = numeros.filter(num = num % 2 === 0);
+            resultado.textContent = "Numeros pares: " + pares.join(", ");
+        }
+    </script>
+</body>
+</html>
